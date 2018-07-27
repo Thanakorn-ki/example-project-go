@@ -15,7 +15,7 @@ func main() {
 	db := config.Init()
 	e := echo.New()
 	api := e.Group("/api") // prefix /api
-	users.RouterUsers(api)
+	users.RouterUsers(api, db)
 	account.RouterAccount(api, db)
 
 	e.Logger.Fatal(e.Start(":8005"))

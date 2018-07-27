@@ -7,7 +7,7 @@ import (
 )
 
 func CreateAccount(c echo.Context) (err error) {
-	account := new(account)
+	account := new(Account)
 	if err = c.Bind(account); err != nil {
 		return
 	}
@@ -16,7 +16,7 @@ func CreateAccount(c echo.Context) (err error) {
 }
 
 func FetchAccounts(c echo.Context) error {
-	var accounts []account
+	var accounts []Account
 	DB.Table("account").Find(&accounts)
 	return c.JSON(http.StatusOK, accounts)
 }

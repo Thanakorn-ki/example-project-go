@@ -3,7 +3,7 @@ package account
 import "time"
 
 type (
-	account struct {
+	Account struct {
 		ID                           int       `json:"id" gorm:"PRIMARY_KEY; type:int(10) unsigned"`
 		AgencyID                     int       `json:"agency_id" gorm:"type:int(10) unsigned"`
 		MainCategoryID               int       `json:"main_category_id" gorm:"type:int(10) unsigned"`
