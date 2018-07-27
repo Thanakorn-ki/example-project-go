@@ -23,6 +23,7 @@ func deleteUser(c echo.Context) error {
 	return nil
 }
 
+// RouterUsers is Init router user
 func RouterUsers(api *echo.Group) {
 	// Routes
 	api.POST("/users", createUser)
