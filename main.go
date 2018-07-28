@@ -14,6 +14,7 @@ func init() {
 func main() {
 	db := config.Init()
 	e := echo.New()
+	e.Use(ServerHeader)
 	api := e.Group("/api") // prefix /api
 	users.RouterUsers(api, db)
 	account.RouterAccount(api, db)
