@@ -1,9 +1,10 @@
 package main
 
 import (
-	"agp-example/src/account"
-	"agp-example/src/config"
-	"agp-example/src/users"
+	"github.com/salapao2136/agp-example/src/account"
+	"github.com/salapao2136/agp-example/src/config"
+
+	"github.com/salapao2136/agp-example/src/users"
 
 	"github.com/labstack/echo"
 )

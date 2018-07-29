@@ -1,8 +1,9 @@
 package users
 
 import (
-	"agp-example/src/account"
 	"net/http"
+
+	"github.com/salapao2136/agp-example/src/account"
 
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
@@ -18,7 +19,7 @@ func createUser(db *gorm.DB) echo.HandlerFunc {
 func findUser(db *gorm.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		var accounts []account.Account
-		db.Table("account").Find(&accounts)
+		db.Table("account").Limit(3).Find(&accounts)
 		return c.JSON(http.StatusOK, accounts)
 	}
 }
