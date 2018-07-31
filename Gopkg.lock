@@ -9,7 +9,10 @@
 
 [[projects]]
   name = "github.com/jinzhu/gorm"
-  packages = ["."]
+  packages = [
+    ".",
+    "dialects/mysql"
+  ]
   revision = "6ed508ec6a4ecb3531899a69cbc746ccf65a4166"
   version = "v1.9.1"
 
@@ -71,7 +74,7 @@
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "e072cadbbdc8dd3d3ffa82b8b4b9304c261d9311"
+  revision = "bd9dbc187b6e1dacfdd2722a87e83093c2d7bd6e"
 
 [[projects]]
   name = "google.golang.org/appengine"
@@ -82,6 +85,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9bbfa84593927705a5115e8d2715a36a82704c50b9493008658b70e2d12d3864"
+  inputs-digest = "82570ae6907e6aabce777aeed6e248aac31ec4f85a3f7ae62dc93f5e5331c3e5"
   solver-name = "gps-cdcl"
   solver-version = 1
