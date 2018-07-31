@@ -3,7 +3,7 @@ package users
 import (
 	"net/http"
 
-	"github.com/salapao2136/example-api/src/account"
+	"github.com/example-project-go/src/account"
 
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
